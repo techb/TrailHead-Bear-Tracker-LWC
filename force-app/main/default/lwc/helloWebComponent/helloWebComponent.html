@@ -1,7 +1,12 @@
 <template>
     <lightning-card title="Lightning Web Component" icon-name="custom:custom14">
         <div class="slds-m-around_medium">
-            <h2>Hello World!</h2>
+            <h2>Hello {greeting}!</h2>
+            <lightning-input
+                label="Name"
+                value={greeting}
+                onchange={handleGreetingChange}>
+            </lightning-input>
         </div>
     </lightning-card>
 </template>
