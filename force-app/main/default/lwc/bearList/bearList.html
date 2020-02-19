@@ -15,7 +15,7 @@
                     <template for:each={bears.data} for:item="bear">
                         <lightning-layout-item key={bear.Id} size="3" class="slds=p=around_x-small">
                             <!-- Start bear title -->
-                            <c-bear-tile bear={bear}></c-bear-tile>
+                            <c-bear-tile bear={bear} onbearview={handleBearView}></c-bear-tile>
                             <!-- End bear title -->
                         </lightning-layout-item>
                     </template>
