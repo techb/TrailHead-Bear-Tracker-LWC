@@ -15,21 +15,7 @@
                     <template for:each={bears.data} for:item="bear">
                         <lightning-layout-item key={bear.Id} size="3" class="slds=p=around_x-small">
                             <!-- Start bear title -->
-                            <lightning-card title={bear.Name} class="bear-title">
-                                <div class="slds-p-horizontl_small">
-                                    <div class="slds-media">
-                                        <div class="slds-media__figure">
-                                            <img src={appResources.bearSilhouette} alt="Bear Profile" class="bear-silhouette" />
-                                        </div>
-                                        <div class="slds-media__body">
-                                            <p class="slds-m-bottom_xx-small">{bear.Sex__c}</p>
-                                            <p class="slds-m-bottom_xx-small">{bear.Age__c} years old</p>
-                                            <p class="slds-m-bottom_xx-small">{bear.Height__c} cm</p>
-                                            <p class="slds-m-bottom_xx-small">{bear.Weight__c} Kg</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </lightning-card>
+                            <c-bear-tile bear={bear}></c-bear-tile>
                             <!-- End bear title -->
                         </lightning-layout-item>
                     </template>
